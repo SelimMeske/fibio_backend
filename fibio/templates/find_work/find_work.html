@@ -1,0 +1,13 @@
+{% extends 'base/base.html' %}
+
+{% block main_content %}
+
+<div class="d-flex flex-column justify-content-center">
+    {% for job in jobs %}
+        <div class="container-flex d-flex flex-column justify-content-start">
+            <h3>{% job.title %}</h3>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

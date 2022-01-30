@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+
+{% block main_content %}
+
+{% load bootstrap5 %}
+
+<div class="container">
+    <h1 class="text-center mb-5">Worker Login</h1>
+    <div class="d-flex justify-content-center">
+        <form autocomplete="off" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {% buttons %}
+                <button type="submit" class="btn btn-primary">
+                    Submit
+                </button>
+        {% endbuttons %}
+        </form>
+    </div>
+</div>
+{% endblock %}

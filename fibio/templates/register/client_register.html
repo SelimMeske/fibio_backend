@@ -1,0 +1,22 @@
+{% static 'base/base.html' %}
+
+{% block main_content %}
+
+{% load bootstrap %}
+
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <h1>Client Register</h1>
+        <form autocomplete="off" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {% buttons %}
+                <button type="submit" class="btn btn-primary">
+                    Register
+                </button>
+            {% endbuttons %}
+        </form>
+    </div>
+</div>
+
+{% endblock %}

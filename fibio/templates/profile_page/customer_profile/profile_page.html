@@ -1,0 +1,12 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block main_content %}
+<div class="d-flex flex-column container-fluid">
+    <div class="d-flex justify-content-center bg-primary flex-column">
+        <img class="rounded-cricle" src="{{ user.image }}" alt="">
+        <h3>{{ user.username }}</h3>
+    </div>
+</div>
+{% endblock %}
